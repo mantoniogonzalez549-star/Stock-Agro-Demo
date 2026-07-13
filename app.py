@@ -138,7 +138,7 @@ st.markdown("""
         inset: 0 !important;
         background-image: url('https://raw.githubusercontent.com/mantoniogonzalez549-star/agrisolution-remitos-demo/main/fondo.jpg') !important;
         background-size: cover !important;
-        background-position: center !important;
+        background-position: center bottom !important;
         background-repeat: no-repeat !important;
         filter: none !important;
         -webkit-filter: none !important;
@@ -150,7 +150,7 @@ st.markdown("""
         content: '' !important;
         position: fixed !important;
         inset: 0 !important;
-        background: rgba(244,250,243,0.62) !important;
+        background: rgba(244,250,243,0.85) !important;
         z-index: -1 !important;
         pointer-events: none !important;
     }
@@ -343,11 +343,11 @@ st.markdown("""
     }
 
     .logo-oval-wrap {
-        background: #f7f3e8;
-        border: 2px solid var(--gold-50, rgba(46,125,50,0.5));
-        border-radius: 50%;
-        width: 420px;
-        height: 252px;
+        background: #ffffff;
+        border: 1px solid rgba(46,125,50,0.35);
+        border-radius: 24px;
+        width: 300px;
+        height: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -361,7 +361,7 @@ st.markdown("""
         height: 100% !important;
         object-fit: contain !important;
         display: block;
-        padding: 15px;
+        padding: 8px;
     }
 
     .title-bubble-login {
@@ -572,7 +572,7 @@ st.markdown("""
 
     /* Responsive: tablas en móvil */
     @media (max-width: 768px) {
-        .logo-oval-wrap { width: 260px !important; height: 156px !important; }
+        .logo-oval-wrap { width: 210px !important; height: 210px !important; }
         .main-title-with-logo { font-size: 1.5rem !important; }
         .title-bubble h1 { font-size: 1.3rem !important; }
     }
@@ -597,7 +597,7 @@ st.markdown("""
     }
 
     .topbar-logo-oval {
-        background: #f7f3e8;
+        background: #ffffff;
         border: 2px solid var(--gold-60);
         border-radius: 50%;
         width: 62px;
