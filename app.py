@@ -46,7 +46,7 @@ logger = logging.getLogger("stock_agricola")
 
 # ── Configuración de página ───────────────────────────────────
 st.set_page_config(
-    page_title="AgroStock — Demo",
+    page_title="AgrIsolution — Demo",
     page_icon="🌾",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -83,31 +83,31 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
     :root {
-        --gold: #d4a017;
-        --gold-light: #e5b52a;
-        --gold-dark: #b87a0c;
-        --gold-05: rgba(212,160,23,0.05);
-        --gold-10: rgba(212,160,23,0.10);
-        --gold-15: rgba(212,160,23,0.15);
-        --gold-18: rgba(212,160,23,0.18);
-        --gold-25: rgba(212,160,23,0.25);
-        --gold-30: rgba(212,160,23,0.30);
-        --gold-35: rgba(212,160,23,0.35);
-        --gold-40: rgba(212,160,23,0.40);
-        --gold-60: rgba(212,160,23,0.60);
-        --gold-75: rgba(212,160,23,0.75);
-        --gold-85: rgba(212,160,23,0.85);
-        --bg-main: #0e0e14;
-        --bg-card: rgba(45,45,52,0.85);
-        --bg-surface: rgba(40,40,50,0.70);
-        --bg-dark: rgba(22,22,28,0.97);
-        --text-primary: #f0f0f5;
-        --text-secondary: #c8c8d4;
-        --text-muted: #a0a0b0;
+        --gold: #2e7d32;
+        --gold-light: #43a047;
+        --gold-dark: #1b5e20;
+        --gold-05: rgba(46,125,50,0.05);
+        --gold-10: rgba(46,125,50,0.10);
+        --gold-15: rgba(46,125,50,0.15);
+        --gold-18: rgba(46,125,50,0.18);
+        --gold-25: rgba(46,125,50,0.25);
+        --gold-30: rgba(46,125,50,0.30);
+        --gold-35: rgba(46,125,50,0.35);
+        --gold-40: rgba(46,125,50,0.40);
+        --gold-60: rgba(46,125,50,0.60);
+        --gold-75: rgba(46,125,50,0.75);
+        --gold-85: rgba(46,125,50,0.85);
+        --bg-main: #f4faf3;
+        --bg-card: rgba(255,255,255,0.85);
+        --bg-surface: rgba(255,255,255,0.70);
+        --bg-dark: rgba(255,255,255,0.97);
+        --text-primary: #1c2b1c;
+        --text-secondary: #33452f;
+        --text-muted: #5f7259;
         --text-gold: #d4c8a8;
-        --green: #22c55e;
-        --red: #ef4444;
-        --amber: #f59e0b;
+        --green: #2e7d32;
+        --red: #c62828;
+        --amber: #b26a00;
     }
 
     [data-testid="stHeader"], header[data-testid="stHeader"], .stAppHeader,
@@ -136,12 +136,12 @@ st.markdown("""
         content: '' !important;
         position: fixed !important;
         inset: 0 !important;
-        background-image: url('https://raw.githubusercontent.com/marcasosguemes-cell/Stock-Agro-Demo/main/Fondo.PNG') !important;
+        background-image: url('https://raw.githubusercontent.com/mantoniogonzalez549-star/agrisolution-remitos-demo/main/fondo.jpg') !important;
         background-size: cover !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
-        filter: grayscale(100%) brightness(0.42) !important;
-        -webkit-filter: grayscale(100%) brightness(0.42) !important;
+        filter: none !important;
+        -webkit-filter: none !important;
         z-index: -2 !important;
         pointer-events: none !important;
     }
@@ -150,7 +150,7 @@ st.markdown("""
         content: '' !important;
         position: fixed !important;
         inset: 0 !important;
-        background: rgba(6,6,10,0.55) !important;
+        background: rgba(244,250,243,0.62) !important;
         z-index: -1 !important;
         pointer-events: none !important;
     }
@@ -164,9 +164,9 @@ st.markdown("""
     }
 
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1a1a1f 0%, #0f0f12 60%, #0a0a0c 100%) !important;
-        border-right: 1px solid rgba(100,100,120,0.3) !important;
-        box-shadow: 4px 0 24px rgba(0,0,0,0.4) !important;
+        background: linear-gradient(180deg, #ffffff 0%, #f4faf3 60%, #ecf5ec 100%) !important;
+        border-right: 1px solid rgba(46,125,50,0.25) !important;
+        box-shadow: 4px 0 24px rgba(27,58,31,0.12) !important;
     }
 
     .sidebar-toggle-wrap > div > button {
@@ -175,10 +175,10 @@ st.markdown("""
         padding: 0 !important;
         font-size: 20px !important;
         background: var(--gold-85) !important;
-        color: #1a1a1f !important;
+        color: #ffffff !important;
         border: none !important;
         border-radius: 10px !important;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.5) !important;
+        box-shadow: 0 4px 14px rgba(27,58,31,0.14) !important;
         cursor: pointer !important;
         min-height: unset !important;
         line-height: 1 !important;
@@ -192,24 +192,24 @@ st.markdown("""
     [data-testid="stSelectbox"] label,
     div[data-testid="stSelectbox"] > label,
     .stSelectbox label {
-        color: #FFFFFF !important;
+        color: #1c2b1c !important;
         font-weight: 600 !important;
         font-size: 0.88rem !important;
-        -webkit-text-fill-color: #FFFFFF !important;
+        -webkit-text-fill-color: #1c2b1c !important;
     }
 
     [data-testid="stSelectbox"] > div > div,
     [data-testid="stSelectbox"] [data-baseweb="select"] > div {
-        background-color: rgba(55,55,65,0.95) !important;
+        background-color: rgba(240,247,240,0.95) !important;
         border: 1px solid var(--gold-40) !important;
         border-radius: 10px !important;
-        color: #FFFFFF !important;
+        color: #1c2b1c !important;
     }
 
     [data-testid="stSelectbox"] [data-baseweb="select"] span,
     [data-testid="stSelectbox"] [data-baseweb="select"] div {
-        color: #FFFFFF !important;
-        -webkit-text-fill-color: #FFFFFF !important;
+        color: #1c2b1c !important;
+        -webkit-text-fill-color: #1c2b1c !important;
     }
 
     [data-testid="stDateInput"] label,
@@ -222,14 +222,14 @@ st.markdown("""
     [data-testid="stCheckbox"] span,
     [data-testid="stRadio"] label,
     [data-testid="stRadio"] span {
-        color: #FFFFFF !important;
+        color: #1c2b1c !important;
         font-weight: 600 !important;
-        -webkit-text-fill-color: #FFFFFF !important;
+        -webkit-text-fill-color: #1c2b1c !important;
     }
 
     /* Tabs blancos y visibles */
     [data-testid="stTabs"] [data-baseweb="tab"] {
-        color: #FFFFFF !important;
+        color: #1c2b1c !important;
         font-weight: 600 !important;
     }
     [data-testid="stTabs"] [data-baseweb="tab"][aria-selected="true"] {
@@ -245,8 +245,8 @@ st.markdown("""
     [data-testid="stMultiSelect"] [data-baseweb="select"] span,
     [data-testid="stMultiSelect"] [data-baseweb="select"] div,
     [data-testid="stMultiSelect"] [data-baseweb="tag"] span {
-        color: #FFFFFF !important;
-        -webkit-text-fill-color: #FFFFFF !important;
+        color: #1c2b1c !important;
+        -webkit-text-fill-color: #1c2b1c !important;
     }
 
     [data-testid="stSidebar"] .stButton button {
@@ -290,7 +290,7 @@ st.markdown("""
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 16px rgba(27,58,31,0.10);
         margin-bottom: 12px;
     }
 
@@ -344,7 +344,7 @@ st.markdown("""
 
     .logo-oval-wrap {
         background: #f7f3e8;
-        border: 2px solid var(--gold-50, rgba(212,160,23,0.5));
+        border: 2px solid var(--gold-50, rgba(46,125,50,0.5));
         border-radius: 50%;
         width: 420px;
         height: 252px;
@@ -352,7 +352,7 @@ st.markdown("""
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        box-shadow: 0 8px 32px rgba(27,58,31,0.10);
         margin-bottom: 20px;
     }
 
@@ -370,7 +370,7 @@ st.markdown("""
         border: 1px solid rgba(255,215,120,0.6);
         border-radius: 20px;
         padding: 1rem 2.2rem 0.9rem 2.2rem;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+        box-shadow: 0 8px 32px rgba(27,58,31,0.10);
         text-align: center;
         margin-bottom: 0.5rem;
         width: 100%;
@@ -380,8 +380,8 @@ st.markdown("""
         font-family: 'Playfair Display', serif !important;
         font-size: 2.2rem !important;
         font-weight: 700 !important;
-        color: #FFFFFF !important;
-        text-shadow: 0 2px 8px rgba(0,0,0,0.6) !important;
+        color: #1c2b1c !important;
+        text-shadow: 0 2px 8px rgba(27,58,31,0.16) !important;
         margin: 0 0 0.3rem 0 !important;
         letter-spacing: 0.02em !important;
     }
@@ -408,10 +408,10 @@ st.markdown("""
         margin: 0;
         font-family: 'Playfair Display', serif !important;
         font-size: 1.8rem !important;
-        color: #FFFFFF !important;
+        color: #1c2b1c !important;
         font-weight: 700;
         letter-spacing: 0.02em;
-        text-shadow: 0 2px 6px rgba(0,0,0,0.5) !important;
+        text-shadow: 0 2px 6px rgba(27,58,31,0.14) !important;
     }
 
     .title-bubble p {
@@ -422,10 +422,10 @@ st.markdown("""
     }
 
     .metric-card {
-        background: linear-gradient(145deg,rgba(55,55,62,0.9) 0%,rgba(45,45,52,0.95) 100%) !important;
+        background: linear-gradient(145deg,rgba(240,247,240,0.9) 0%,rgba(255,255,255,0.95) 100%) !important;
         border: 1px solid var(--gold-35);
         border-radius: 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 15px rgba(27,58,31,0.10);
         transition: all 0.3s cubic-bezier(.4,0,.2,1);
         text-align: center !important;
         padding: 1.2rem 1rem;
@@ -434,7 +434,7 @@ st.markdown("""
 
     .metric-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+        box-shadow: 0 12px 28px rgba(27,58,31,0.12);
         border-color: var(--gold-60);
     }
 
@@ -456,7 +456,7 @@ st.markdown("""
 
     .stButton > button {
         background: linear-gradient(135deg,var(--gold),var(--gold-dark)) !important;
-        color: #1a1a1f !important;
+        color: #ffffff !important;
         border: none !important;
         border-radius: 12px;
         padding: 0.6rem 1.3rem;
@@ -468,7 +468,7 @@ st.markdown("""
 
     .stButton > button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+        box-shadow: 0 6px 18px rgba(27,58,31,0.10);
         background: linear-gradient(135deg,var(--gold-light),#c98a1a) !important;
         color: #000000 !important;
     }
@@ -493,7 +493,7 @@ st.markdown("""
     }
 
     .password-warning {
-        background: linear-gradient(135deg,rgba(212,160,23,0.2),rgba(180,120,10,0.15));
+        background: linear-gradient(135deg,rgba(46,125,50,0.2),rgba(180,120,10,0.15));
         border: 1px solid var(--gold-60);
         border-radius: 16px;
         padding: 1.5rem 2rem;
@@ -531,7 +531,7 @@ st.markdown("""
     [data-testid="stSidebar"] span,
     [data-testid="stSidebar"] div[data-testid="stMarkdownContainer"] h3,
     [data-testid="stSidebar"] div[data-testid="stMarkdownContainer"] p {
-        color: #FFFFFF !important;
+        color: #1c2b1c !important;
     }
 
     [data-testid="stMetric"] label,
@@ -541,14 +541,14 @@ st.markdown("""
     [data-testid="metric-container"] label,
     div[data-testid="stMetricLabel"] p,
     div[data-testid="stMetricValue"] div {
-        color: #FFFFFF !important;
-        -webkit-text-fill-color: #FFFFFF !important;
+        color: #1c2b1c !important;
+        -webkit-text-fill-color: #1c2b1c !important;
     }
 
     [data-testid="stAppViewContainer"] h3,
     [data-testid="stAppViewContainer"] div[data-testid="stMarkdownContainer"] h3 {
-        color: #FFFFFF !important;
-        text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+        color: #1c2b1c !important;
+        text-shadow: 0 1px 4px rgba(27,58,31,0.16);
     }
 
     [data-testid="stForm"] .stButton > button,
@@ -567,7 +567,7 @@ st.markdown("""
     [data-testid="stForm"] span,
     [data-testid="stForm"] div[data-testid="stMarkdownContainer"] h3,
     [data-testid="stForm"] div[data-testid="stMarkdownContainer"] p {
-        color: #FFFFFF !important;
+        color: #1c2b1c !important;
     }
 
     /* Responsive: tablas en móvil */
@@ -607,7 +607,7 @@ st.markdown("""
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+        box-shadow: 0 4px 16px rgba(27,58,31,0.10);
     }
 
     .topbar-logo {
@@ -704,7 +704,7 @@ st.markdown("""
         align-items: center !important;
         justify-content: center !important;
         margin: 0 auto !important;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.35) !important;
+        box-shadow: 0 3px 10px rgba(27,58,31,0.10) !important;
         transition: all 0.2s ease !important;
     }
 
@@ -829,7 +829,7 @@ def _password_strength(pwd: str) -> tuple[int, str, str]:
     if len(pwd) >= 12:
         score += 1
     labels = ["Muy débil", "Débil", "Regular", "Buena", "Fuerte"]
-    colors = ["#ef4444", "#f97316", "#f59e0b", "#22c55e", "#16a34a"]
+    colors = ["#c62828", "#f97316", "#b26a00", "#2e7d32", "#16a34a"]
     return score, labels[score], colors[score]
 
 
@@ -925,7 +925,7 @@ def generar_link_pdf(ruta_pdf):
         f'style="display:inline-flex;align-items:center;gap:5px;text-decoration:none;'
         f'background:linear-gradient(135deg,#c0392b,#e74c3c);color:#fff;'
         f'padding:4px 10px;border-radius:6px;font-size:0.78rem;font-weight:700;'
-        f'letter-spacing:0.04em;box-shadow:0 2px 6px rgba(0,0,0,0.35);" '
+        f'letter-spacing:0.04em;box-shadow:0 2px 6px rgba(27,58,31,0.10);" '
         f'onmouseover="this.style.opacity=\'0.82\'" onmouseout="this.style.opacity=\'1\'">'
         f'<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" '
         f'fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">'
@@ -948,7 +948,7 @@ def login():
         st.markdown("""
         <div class="title-container">
             <div class="logo-oval-wrap">
-                <img src="https://raw.githubusercontent.com/marcasosguemes-cell/Stock-Agro-Demo/main/Logo.png" class="title-logo" alt="Logo">
+                <img src="https://raw.githubusercontent.com/mantoniogonzalez549-star/agrisolution-remitos-demo/main/icon-512.png" class="title-logo" alt="Logo">
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -1111,7 +1111,7 @@ def topbar():
         st.markdown("""
         <div class="topbar-brand">
             <div class="topbar-logo-oval">
-                <img src="https://raw.githubusercontent.com/marcasosguemes-cell/Stock-Agro-Demo/main/Logo.png" class="topbar-logo" alt="Logo">
+                <img src="https://raw.githubusercontent.com/mantoniogonzalez549-star/agrisolution-remitos-demo/main/icon-512.png" class="topbar-logo" alt="Logo">
             </div>
             <h1>Stock Agrícola</h1>
         </div>
@@ -1242,7 +1242,7 @@ def topbar():
         if es_activo:
             st.markdown(f"""<style>
             div[class*="st-key-{key_nav}"] button {{
-                background: linear-gradient(90deg,rgba(212,160,23,0.42) 0%,rgba(212,160,23,0.12) 100%) !important;
+                background: linear-gradient(90deg,rgba(46,125,50,0.42) 0%,rgba(46,125,50,0.12) 100%) !important;
                 border-color: var(--gold-75) !important;
                 color: #f5e6b0 !important;
                 font-weight: 700 !important;
@@ -1262,7 +1262,7 @@ def topbar():
 
     if rol != "admin":
         st.markdown(
-            '<div style="font-size:0.78rem;color:#c8c8d4;margin-top:0.3rem;">📎 <b>Importante:</b> al registrar ingresos o egresos debés adjuntar el remito en PDF.</div>',
+            '<div style="font-size:0.78rem;color:#33452f;margin-top:0.3rem;">📎 <b>Importante:</b> al registrar ingresos o egresos debés adjuntar el remito en PDF.</div>',
             unsafe_allow_html=True
         )
 
@@ -1469,15 +1469,15 @@ def render_tabla_html(df, height=500):
     cols = list(df.columns)
     filas_html = ""
     for _, row in df.iterrows():
-        filas_html += '<tr onmouseover="this.style.backgroundColor=\'rgba(212,160,23,0.10)\'" onmouseout="this.style.backgroundColor=\'transparent\'">'
+        filas_html += '<tr onmouseover="this.style.backgroundColor=\'rgba(46,125,50,0.10)\'" onmouseout="this.style.backgroundColor=\'transparent\'">'
         for col in cols:
             val = row[col]
-            style = "color:#f0f0f5;font-size:0.85rem;"
+            style = "color:#1c2b1c;font-size:0.85rem;"
             display_val = ""
             if col in ("stock", "Stock", "cantidad", "Cantidad"):
                 try:
                     v = float(val)
-                    color = "#ef4444" if v < 50 else "#f59e0b" if v < 200 else "#22c55e"
+                    color = "#c62828" if v < 50 else "#b26a00" if v < 200 else "#2e7d32"
                     style = f"color:{color};font-weight:700;font-size:0.88rem;text-align:right;"
                     display_val = f"{v:,.2f}"
                 except Exception:
@@ -1487,11 +1487,11 @@ def render_tabla_html(df, height=500):
                 style = "text-align:center;"
             else:
                 display_val = html.escape(str(val)) if val not in (None, "nan", "None") else "—"
-            filas_html += f'<td style="padding:8px 12px;border-bottom:1px solid rgba(212,160,23,0.12);{style}">{display_val}</td>'
+            filas_html += f'<td style="padding:8px 12px;border-bottom:1px solid rgba(46,125,50,0.12);{style}">{display_val}</td>'
         filas_html += "</tr>"
 
     headers = "".join([
-        f'<th style="padding:10px 12px;color:#1a1a1f;font-weight:700;font-size:0.78rem;'
+        f'<th style="padding:10px 12px;color:#33452ffff;font-weight:700;font-size:0.78rem;'
         f'text-transform:uppercase;letter-spacing:0.07em;white-space:nowrap;text-align:left;">'
         f'{html.escape(str(c))}</th>'
         for c in cols
@@ -1499,9 +1499,9 @@ def render_tabla_html(df, height=500):
 
     tabla_html = f"""<!DOCTYPE html><html><head><style>
     body{{margin:0;padding:0;background:transparent;font-family:'DM Sans',sans-serif;}}
-    .wrap{{overflow-x:auto;border-radius:14px;border:1px solid rgba(212,160,23,0.35);box-shadow:0 6px 24px rgba(0,0,0,0.4);}}
-    table{{width:100%;border-collapse:collapse;background:rgba(22,22,28,0.97);}}
-    thead tr{{background:linear-gradient(135deg,#d4a017 0%,#b87a0c 100%);}}
+    .wrap{{overflow-x:auto;border-radius:14px;border:1px solid rgba(46,125,50,0.35);box-shadow:0 6px 24px rgba(27,58,31,0.12);}}
+    table{{width:100%;border-collapse:collapse;background:rgba(255,255,255,0.97);}}
+    thead tr{{background:linear-gradient(135deg,#2e7d32 0%,#1b5e20 100%);}}
     tbody tr{{transition:background 0.15s;}}
     </style></head><body>
     <div class="wrap"><table>
@@ -1631,40 +1631,40 @@ def pagina_dashboard():
 
     st.markdown(f"""
     <div style="display:flex;gap:1.2rem;margin:1.2rem 0 1.8rem 0;flex-wrap:wrap;">
-        <div style="flex:1;min-width:180px;background:linear-gradient(135deg,rgba(212,160,23,0.25),rgba(212,160,23,0.12));
-                    border:1px solid rgba(212,160,23,0.6);border-radius:20px;padding:1.4rem 1.6rem;
-                    box-shadow:0 6px 24px rgba(0,0,0,0.35);text-align:center;backdrop-filter:blur(8px);">
+        <div style="flex:1;min-width:180px;background:linear-gradient(135deg,rgba(46,125,50,0.25),rgba(46,125,50,0.12));
+                    border:1px solid rgba(46,125,50,0.6);border-radius:20px;padding:1.4rem 1.6rem;
+                    box-shadow:0 6px 24px rgba(27,58,31,0.10);text-align:center;backdrop-filter:blur(8px);">
             <div style="font-size:2rem;margin-bottom:4px;">📦</div>
-            <div style="font-size:2.4rem;font-weight:800;color:#d4a017;font-family:'Playfair Display',serif;
-                        text-shadow:0 2px 8px rgba(0,0,0,0.4);line-height:1.1;">{total_stock:,.0f}</div>
-            <div style="font-size:0.8rem;color:#fff;font-weight:600;text-transform:uppercase;
+            <div style="font-size:2.4rem;font-weight:800;color:#2e7d32;font-family:'Playfair Display',serif;
+                        text-shadow:0 2px 8px rgba(27,58,31,0.12);line-height:1.1;">{total_stock:,.0f}</div>
+            <div style="font-size:0.8rem;color:#33452f;font-weight:600;text-transform:uppercase;
                         letter-spacing:0.1em;margin-top:6px;opacity:0.85;">Stock Total (unidades)</div>
         </div>
         <div style="flex:1;min-width:180px;background:linear-gradient(135deg,rgba(34,197,94,0.25),rgba(34,197,94,0.12));
                     border:1px solid rgba(34,197,94,0.6);border-radius:20px;padding:1.4rem 1.6rem;
-                    box-shadow:0 6px 24px rgba(0,0,0,0.35);text-align:center;backdrop-filter:blur(8px);">
+                    box-shadow:0 6px 24px rgba(27,58,31,0.10);text-align:center;backdrop-filter:blur(8px);">
             <div style="font-size:2rem;margin-bottom:4px;">🏷️</div>
-            <div style="font-size:2.4rem;font-weight:800;color:#22c55e;font-family:'Playfair Display',serif;
-                        text-shadow:0 2px 8px rgba(0,0,0,0.4);line-height:1.1;">{total_productos}</div>
-            <div style="font-size:0.8rem;color:#fff;font-weight:600;text-transform:uppercase;
+            <div style="font-size:2.4rem;font-weight:800;color:#2e7d32;font-family:'Playfair Display',serif;
+                        text-shadow:0 2px 8px rgba(27,58,31,0.12);line-height:1.1;">{total_productos}</div>
+            <div style="font-size:0.8rem;color:#33452f;font-weight:600;text-transform:uppercase;
                         letter-spacing:0.1em;margin-top:6px;opacity:0.85;">Productos en Stock</div>
         </div>
         <div style="flex:1;min-width:180px;background:linear-gradient(135deg,rgba(239,68,68,0.25),rgba(239,68,68,0.12));
                     border:1px solid rgba(239,68,68,0.6);border-radius:20px;padding:1.4rem 1.6rem;
-                    box-shadow:0 6px 24px rgba(0,0,0,0.35);text-align:center;backdrop-filter:blur(8px);">
+                    box-shadow:0 6px 24px rgba(27,58,31,0.10);text-align:center;backdrop-filter:blur(8px);">
             <div style="font-size:2rem;margin-bottom:4px;">⚠️</div>
-            <div style="font-size:2.4rem;font-weight:800;color:#ef4444;font-family:'Playfair Display',serif;
-                        text-shadow:0 2px 8px rgba(0,0,0,0.4);line-height:1.1;">{stock_bajo}</div>
-            <div style="font-size:0.8rem;color:#fff;font-weight:600;text-transform:uppercase;
+            <div style="font-size:2.4rem;font-weight:800;color:#c62828;font-family:'Playfair Display',serif;
+                        text-shadow:0 2px 8px rgba(27,58,31,0.12);line-height:1.1;">{stock_bajo}</div>
+            <div style="font-size:0.8rem;color:#33452f;font-weight:600;text-transform:uppercase;
                         letter-spacing:0.1em;margin-top:6px;opacity:0.85;">Stock Crítico (&lt;{cfg.STOCK_CRITICO_DEFAULT})</div>
         </div>
         <div style="flex:1;min-width:180px;background:linear-gradient(135deg,rgba(59,130,246,0.25),rgba(59,130,246,0.12));
                     border:1px solid rgba(59,130,246,0.6);border-radius:20px;padding:1.4rem 1.6rem;
-                    box-shadow:0 6px 24px rgba(0,0,0,0.35);text-align:center;backdrop-filter:blur(8px);">
+                    box-shadow:0 6px 24px rgba(27,58,31,0.10);text-align:center;backdrop-filter:blur(8px);">
             <div style="font-size:2rem;margin-bottom:4px;">📅</div>
             <div style="font-size:2.4rem;font-weight:800;color:#3b82f6;font-family:'Playfair Display',serif;
-                        text-shadow:0 2px 8px rgba(0,0,0,0.4);line-height:1.1;">{movs_este_mes}</div>
-            <div style="font-size:0.8rem;color:#fff;font-weight:600;text-transform:uppercase;
+                        text-shadow:0 2px 8px rgba(27,58,31,0.12);line-height:1.1;">{movs_este_mes}</div>
+            <div style="font-size:0.8rem;color:#33452f;font-weight:600;text-transform:uppercase;
                         letter-spacing:0.1em;margin-top:6px;opacity:0.85;">Movimientos este mes</div>
         </div>
     </div>
@@ -1686,23 +1686,23 @@ def pagina_dashboard():
         cant_hoy_eg = float(df_hoy_filt[df_hoy_filt["tipo"] == "egreso"]["cantidad"].sum()) if movs_hoy_eg > 0 else 0.0
 
     st.markdown(f"""
-    <div style="background:linear-gradient(135deg,rgba(212,160,23,0.08),rgba(40,40,50,0.6));
-                border:1px solid rgba(212,160,23,0.25);border-radius:16px;padding:0.9rem 1.4rem;
+    <div style="background:linear-gradient(135deg,rgba(46,125,50,0.08),rgba(255,255,255,0.6));
+                border:1px solid rgba(46,125,50,0.25);border-radius:16px;padding:0.9rem 1.4rem;
                 margin:0 0 1.4rem 0;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
-        <div style="font-size:0.78rem;font-weight:700;color:#d4a017;text-transform:uppercase;letter-spacing:0.1em;min-width:80px;">
+        <div style="font-size:0.78rem;font-weight:700;color:#2e7d32;text-transform:uppercase;letter-spacing:0.1em;min-width:80px;">
             📅 Hoy
         </div>
         <div style="display:flex;gap:1.8rem;flex-wrap:wrap;">
-            <span style="font-size:0.88rem;color:#22c55e;font-weight:600;">
+            <span style="font-size:0.88rem;color:#2e7d32;font-weight:600;">
                 ▲ {movs_hoy_ing} ingresos
-                <span style="color:#a0a0b0;font-weight:400;font-size:0.8rem;"> ({cant_hoy_ing:,.1f} un.)</span>
+                <span style="color:#5f7259;font-weight:400;font-size:0.8rem;"> ({cant_hoy_ing:,.1f} un.)</span>
             </span>
-            <span style="font-size:0.88rem;color:#ef4444;font-weight:600;">
+            <span style="font-size:0.88rem;color:#c62828;font-weight:600;">
                 ▼ {movs_hoy_eg} egresos
-                <span style="color:#a0a0b0;font-weight:400;font-size:0.8rem;"> ({cant_hoy_eg:,.1f} un.)</span>
+                <span style="color:#5f7259;font-weight:400;font-size:0.8rem;"> ({cant_hoy_eg:,.1f} un.)</span>
             </span>
-            <span style="font-size:0.82rem;color:#a0a0b0;">
-                Total movimientos hoy: <strong style="color:#f0f0f5;">{movs_hoy_ing + movs_hoy_eg}</strong>
+            <span style="font-size:0.82rem;color:#5f7259;">
+                Total movimientos hoy: <strong style="color:#1c2b1c;">{movs_hoy_ing + movs_hoy_eg}</strong>
             </span>
         </div>
     </div>
@@ -1712,7 +1712,7 @@ def pagina_dashboard():
     if len(df_filtrado) > 0:
         df_chart = df_filtrado.sort_values("stock", ascending=True).tail(20).copy()
         df_chart["color_stock"] = df_chart["stock"].apply(
-            lambda s: "#ef4444" if s < cfg.STOCK_CRITICO_DEFAULT else ("#f59e0b" if s < 200 else "#22c55e")
+            lambda s: "#c62828" if s < cfg.STOCK_CRITICO_DEFAULT else ("#b26a00" if s < 200 else "#2e7d32")
         )
         fig = go.Figure(go.Bar(
             x=df_chart["stock"],
@@ -1720,7 +1720,7 @@ def pagina_dashboard():
             orientation="h",
             marker=dict(
                 color=df_chart["color_stock"],
-                line=dict(color="rgba(212,160,23,0.3)", width=0.5)
+                line=dict(color="rgba(46,125,50,0.3)", width=0.5)
             ),
             text=df_chart["stock"].apply(lambda v: f"{v:,.1f}"),
             textposition="outside",
@@ -1729,29 +1729,29 @@ def pagina_dashboard():
         ))
         fig.update_layout(
             paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(22,22,28,0.6)",
-            font=dict(family="DM Sans", color="#c8c8d4", size=12),
+            plot_bgcolor="rgba(255,255,255,0.6)",
+            font=dict(family="DM Sans", color="#33452f", size=12),
             margin=dict(l=10, r=60, t=30, b=10),
             height=max(220, len(df_chart) * 32 + 50),
             xaxis=dict(
-                gridcolor="rgba(212,160,23,0.15)",
-                zerolinecolor="rgba(212,160,23,0.3)",
-                tickfont=dict(color="#a0a0b0", size=10),
-                title=dict(text="Stock", font=dict(color="#d4a017", size=11))
+                gridcolor="rgba(46,125,50,0.15)",
+                zerolinecolor="rgba(46,125,50,0.3)",
+                tickfont=dict(color="#5f7259", size=10),
+                title=dict(text="Stock", font=dict(color="#2e7d32", size=11))
             ),
             yaxis=dict(
                 gridcolor="rgba(0,0,0,0)",
-                tickfont=dict(color="#f0f0f5", size=11),
+                tickfont=dict(color="#1c2b1c", size=11),
                 title=None
             ),
-            hoverlabel=dict(bgcolor="rgba(22,22,28,0.95)", font_color="#f0f0f5"),
+            hoverlabel=dict(bgcolor="rgba(255,255,255,0.95)", font_color="#1c2b1c"),
             bargap=0.25,
         )
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
     st.markdown("""
-    <div style="font-size:1.3rem;font-weight:700;color:#fff;margin:0.5rem 0 0.8rem 0;
-                text-shadow:0 1px 4px rgba(0,0,0,0.5);">📋 Stock Actual por Producto</div>
+    <div style="font-size:1.3rem;font-weight:700;color:#33452f;margin:0.5rem 0 0.8rem 0;
+                text-shadow:0 1px 4px rgba(27,58,31,0.14);">📋 Stock Actual por Producto</div>
     """, unsafe_allow_html=True)
 
     df_tabla = df_filtrado[["producto", "categoria", "presentacion", "stock", "unidad"]].copy()
@@ -1761,20 +1761,20 @@ def pagina_dashboard():
     for _, row in df_tabla.iterrows():
         stock_val = float(row["stock"])
         if stock_val < cfg.STOCK_CRITICO_DEFAULT:
-            stock_color = "#ef4444"
+            stock_color = "#c62828"
         elif stock_val < 200:
-            stock_color = "#f59e0b"
+            stock_color = "#b26a00"
         else:
-            stock_color = "#22c55e"
+            stock_color = "#2e7d32"
 
         filas_html += f"""
-        <tr onmouseover="this.style.backgroundColor='rgba(212,160,23,0.12)'"
+        <tr onmouseover="this.style.backgroundColor='rgba(46,125,50,0.12)'"
             onmouseout="this.style.backgroundColor='transparent'">
-            <td style="padding:9px 13px;color:#f0f0f5;font-size:0.88rem;font-weight:600;">{html.escape(str(row['producto']))}</td>
+            <td style="padding:9px 13px;color:#1c2b1c;font-size:0.88rem;font-weight:600;">{html.escape(str(row['producto']))}</td>
             <td style="padding:9px 13px;color:#d4c8a8;font-size:0.84rem;">{html.escape(str(row['categoria']))}</td>
             <td style="padding:9px 13px;color:#b0b0c0;font-size:0.84rem;">{html.escape(str(row['presentacion']))}</td>
             <td style="padding:9px 13px;color:{stock_color};font-size:0.95rem;font-weight:800;text-align:right;">{stock_val:,.2f}</td>
-            <td style="padding:9px 13px;color:#a0a0b0;font-size:0.82rem;">{html.escape(str(row['unidad']))}</td>
+            <td style="padding:9px 13px;color:#5f7259;font-size:0.82rem;">{html.escape(str(row['unidad']))}</td>
         </tr>"""
 
     estab_label = st.session_state.get("estab_activo_nombre", "Todos los establecimientos")
@@ -1788,18 +1788,18 @@ def pagina_dashboard():
     tabla_html = f"""<!DOCTYPE html>
 <html><head><style>
   body {{ margin:0; padding:0; background:transparent; font-family:'DM Sans',sans-serif; }}
-  .wrap {{ overflow-x:auto; border-radius:14px; border:1px solid rgba(212,160,23,0.35); box-shadow:0 6px 24px rgba(0,0,0,0.4); }}
-  table {{ width:100%; border-collapse:collapse; background:rgba(22,22,28,0.97); }}
-  thead tr {{ background:linear-gradient(135deg,#d4a017 0%,#b87a0c 100%); }}
-  th {{ padding:11px 13px; color:#1a1a1f; font-weight:700; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.07em; white-space:nowrap; }}
-  tbody tr {{ border-bottom:1px solid rgba(212,160,23,0.15); transition:background 0.2s; }}
+  .wrap {{ overflow-x:auto; border-radius:14px; border:1px solid rgba(46,125,50,0.35); box-shadow:0 6px 24px rgba(27,58,31,0.12); }}
+  table {{ width:100%; border-collapse:collapse; background:rgba(255,255,255,0.97); }}
+  thead tr {{ background:linear-gradient(135deg,#2e7d32 0%,#1b5e20 100%); }}
+  th {{ padding:11px 13px; color:#33452ffff; font-weight:700; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.07em; white-space:nowrap; }}
+  tbody tr {{ border-bottom:1px solid rgba(46,125,50,0.15); transition:background 0.2s; }}
   .print-btn {{
     display:inline-flex; align-items:center; gap:6px;
     margin-bottom:10px; padding:7px 18px;
-    background:linear-gradient(135deg,#d4a017,#b87a0c);
-    color:#1a1a1f; font-weight:700; font-size:0.85rem;
+    background:linear-gradient(135deg,#2e7d32,#1b5e20);
+    color:#33452ffff; font-weight:700; font-size:0.85rem;
     border:none; border-radius:8px; cursor:pointer;
-    box-shadow:0 3px 10px rgba(0,0,0,0.3);
+    box-shadow:0 3px 10px rgba(27,58,31,0.10);
     font-family:'DM Sans',sans-serif;
   }}
   .print-btn:hover {{ background:linear-gradient(135deg,#e6b520,#c98a10); }}
@@ -1808,8 +1808,8 @@ def pagina_dashboard():
     body {{ background:#fff !important; }}
     .wrap {{ border:1px solid #ccc !important; box-shadow:none !important; border-radius:4px !important; }}
     table {{ background:#fff !important; }}
-    thead tr {{ background:#d4a017 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }}
-    th {{ color:#1a1a1f !important; }}
+    thead tr {{ background:#2e7d32 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }}
+    th {{ color:#33452ffff !important; }}
     tbody tr {{ border-bottom:1px solid #ddd !important; }}
     td {{ color:#111 !important; font-size:0.82rem !important; }}
     .print-header {{ display:block !important; }}
@@ -1873,11 +1873,11 @@ def pagina_ingreso():
               background:linear-gradient(145deg,#1a2e1a,#162816);
               border:2px solid rgba(34,197,94,0.7);
               border-radius:24px;padding:3rem 3.5rem;
-              text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.6);
+              text-align:center;box-shadow:0 24px 80px rgba(27,58,31,0.16);
               max-width:420px;width:90%;
               animation:popIn .35s cubic-bezier(.175,.885,.32,1.275);">
             <div style="font-size:4rem;margin-bottom:1rem;">&#x2705;</div>
-            <div style="color:#22c55e;font-weight:800;font-size:1.4rem;margin-bottom:0.5rem;">
+            <div style="color:#2e7d32;font-weight:800;font-size:1.4rem;margin-bottom:0.5rem;">
               Ingreso registrado!
             </div>
             <div style="color:#a0c8a0;font-size:0.95rem;margin-bottom:2rem;">
@@ -2049,7 +2049,7 @@ def pagina_ingreso():
             })
 
         if i < num_lineas - 1:
-            st.markdown("<hr style='border-color:rgba(212,160,23,0.2);margin:0.5rem 0'>", unsafe_allow_html=True)
+            st.markdown("<hr style='border-color:rgba(46,125,50,0.2);margin:0.5rem 0'>", unsafe_allow_html=True)
 
     # ── Botones agregar / quitar línea ──────────────────────────
     col_btn1, col_btn2 = st.columns(2)
@@ -2178,11 +2178,11 @@ def pagina_egreso():
               background:linear-gradient(145deg,#2e1a1a,#281616);
               border:2px solid rgba(239,68,68,0.7);
               border-radius:24px;padding:3rem 3.5rem;
-              text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.6);
+              text-align:center;box-shadow:0 24px 80px rgba(27,58,31,0.16);
               max-width:420px;width:90%;
               animation:popIn .35s cubic-bezier(.175,.885,.32,1.275);">
             <div style="font-size:4rem;margin-bottom:1rem;">&#x2705;</div>
-            <div style="color:#ef4444;font-weight:800;font-size:1.4rem;margin-bottom:0.5rem;">
+            <div style="color:#c62828;font-weight:800;font-size:1.4rem;margin-bottom:0.5rem;">
               Egreso registrado!
             </div>
             <div style="color:#c8a0a0;font-size:0.95rem;margin-bottom:2rem;">
@@ -2310,7 +2310,7 @@ def pagina_egreso():
                 if not stock_actual_df.empty:
                     fila_stock = stock_actual_df[stock_actual_df["producto_id"] == producto_id_i]
                     stock_disp = fila_stock.iloc[0]["stock"] if not fila_stock.empty else 0
-                    color_stock = "#22c55e" if stock_disp >= 50 else ("#f59e0b" if stock_disp > 0 else "#ef4444")
+                    color_stock = "#2e7d32" if stock_disp >= 50 else ("#b26a00" if stock_disp > 0 else "#c62828")
                     st.markdown(
                         f"<small style='color:{color_stock}'>Stock disponible: <b>{stock_disp:.2f}</b></small>",
                         unsafe_allow_html=True
@@ -2335,7 +2335,7 @@ def pagina_egreso():
             })
 
         if i < num_lineas - 1:
-            st.markdown("<hr style='border-color:rgba(212,160,23,0.2);margin:0.5rem 0'>", unsafe_allow_html=True)
+            st.markdown("<hr style='border-color:rgba(46,125,50,0.2);margin:0.5rem 0'>", unsafe_allow_html=True)
 
     # ── Botones agregar / quitar línea ──────────────────────────
     col_btn1, col_btn2 = st.columns(2)
@@ -2558,10 +2558,10 @@ def pagina_historial():
     for _, row in display_df.iterrows():
         if row["Tipo"] == "ingreso":
             row_bg = "rgba(34,197,94,0.10)"
-            tipo_badge = '<span style="background:#22c55e;color:#000;padding:2px 10px;border-radius:20px;font-size:0.78rem;font-weight:700;">▲ ingreso</span>'
+            tipo_badge = '<span style="background:#2e7d32;color:#000;padding:2px 10px;border-radius:20px;font-size:0.78rem;font-weight:700;">▲ ingreso</span>'
         else:
             row_bg = "rgba(239,68,68,0.10)"
-            tipo_badge = '<span style="background:#ef4444;color:#fff;padding:2px 10px;border-radius:20px;font-size:0.78rem;font-weight:700;">▼ egreso</span>'
+            tipo_badge = '<span style="background:#c62828;color:#33452f;padding:2px 10px;border-radius:20px;font-size:0.78rem;font-weight:700;">▼ egreso</span>'
 
         obs_raw = row["Observaciones"]
         obs = html.escape(str(obs_raw)) if obs_raw and str(obs_raw) not in ["nan", "None", ""] else "—"
@@ -2585,7 +2585,7 @@ def pagina_historial():
                 mod_en_fmt = _dt.fromisoformat(mod_en).strftime("%d/%m/%Y %H:%M") if mod_en else ""
             except Exception:
                 mod_en_fmt = mod_en
-            mod_badge = f'''<span style="background:#7c3aed;color:#fff;padding:2px 8px;border-radius:20px;font-size:0.72rem;font-weight:700;margin-left:6px;">✏️ Modificado</span>'''
+            mod_badge = f'''<span style="background:#7c3aed;color:#33452f;padding:2px 8px;border-radius:20px;font-size:0.72rem;font-weight:700;margin-left:6px;">✏️ Modificado</span>'''
             mod_tooltip = html.escape(f"Por: {mod_por} | {mod_en_fmt} | Motivo: {mod_motivo}")
             mod_info = f'''<div style="font-size:0.75rem;color:#c4b5fd;margin-top:3px;" title="{mod_tooltip}">✏️ {html.escape(mod_por)} · {mod_en_fmt}</div>'''
             if mod_motivo:
@@ -2597,25 +2597,25 @@ def pagina_historial():
         fecha_cell = html.escape(str(row["Fecha"])) + ('<br><span style="font-size:0.72rem;color:#c4b5fd;">✏️ editado</span>' if fue_modificado else "")
 
         filas_html += f"""
-        <tr style="background-color:{row_bg};border-bottom:1px solid rgba(212,160,23,0.15);{'border-left:3px solid #7c3aed;' if fue_modificado else ''}"
-            onmouseover="this.style.backgroundColor='rgba(212,160,23,0.12)'"
+        <tr style="background-color:{row_bg};border-bottom:1px solid rgba(46,125,50,0.15);{'border-left:3px solid #7c3aed;' if fue_modificado else ''}"
+            onmouseover="this.style.backgroundColor='rgba(46,125,50,0.12)'"
             onmouseout="this.style.backgroundColor='{row_bg}'">
-            <td style="padding:9px 13px;color:#e8e8f0;font-size:0.84rem;white-space:nowrap;">{fecha_cell}</td>
+            <td style="padding:9px 13px;color:#243324;font-size:0.84rem;white-space:nowrap;">{fecha_cell}</td>
             <td style="padding:9px 13px;text-align:center;">{tipo_badge}</td>
             <td style="padding:9px 13px;color:#d4c8a8;font-size:0.84rem;">{html.escape(str(row['Establecimiento']))}</td>
-            <td style="padding:9px 13px;color:#f0f0f5;font-size:0.84rem;font-weight:600;">{html.escape(str(row['Producto']))}</td>
-            <td style="padding:9px 13px;color:#d4a017;font-size:0.9rem;font-weight:700;text-align:right;">{cantidad_fmt}</td>
+            <td style="padding:9px 13px;color:#1c2b1c;font-size:0.84rem;font-weight:600;">{html.escape(str(row['Producto']))}</td>
+            <td style="padding:9px 13px;color:#2e7d32;font-size:0.9rem;font-weight:700;text-align:right;">{cantidad_fmt}</td>
             <td style="padding:9px 13px;color:#90cdf4;font-size:0.82rem;">{usuario_cell}</td>
             <td style="padding:9px 13px;text-align:center;">{remito}</td>
-            <td style="padding:9px 13px;color:#a0a0b0;font-size:0.82rem;">{obs}{mod_info}</td>
+            <td style="padding:9px 13px;color:#5f7259;font-size:0.82rem;">{obs}{mod_info}</td>
         </tr>"""
 
     tabla_html = f"""
 <style>
-  .hist-wrap {{ overflow-x:auto; border-radius:14px; border:1px solid rgba(212,160,23,0.35); box-shadow:0 6px 24px rgba(0,0,0,0.4); margin-top:8px; }}
-  .hist-wrap table {{ width:100%; border-collapse:collapse; background:rgba(22,22,28,0.97); font-family:'DM Sans',sans-serif; }}
-  .hist-wrap thead tr {{ background:linear-gradient(135deg,#d4a017 0%,#b87a0c 100%); }}
-  .hist-wrap th {{ padding:11px 13px; color:#1a1a1f; font-weight:700; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.07em; white-space:nowrap; }}
+  .hist-wrap {{ overflow-x:auto; border-radius:14px; border:1px solid rgba(46,125,50,0.35); box-shadow:0 6px 24px rgba(27,58,31,0.12); margin-top:8px; }}
+  .hist-wrap table {{ width:100%; border-collapse:collapse; background:rgba(255,255,255,0.97); font-family:'DM Sans',sans-serif; }}
+  .hist-wrap thead tr {{ background:linear-gradient(135deg,#2e7d32 0%,#1b5e20 100%); }}
+  .hist-wrap th {{ padding:11px 13px; color:#33452ffff; font-weight:700; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.07em; white-space:nowrap; }}
 </style>
 <div class="hist-wrap"><table>
   <thead><tr>
@@ -2637,10 +2637,10 @@ def pagina_historial():
     if es_super_admin():
         st.markdown("---")
         st.markdown("""
-        <div style="background:linear-gradient(135deg,rgba(212,160,23,0.15),rgba(180,60,60,0.10));
-                    border:1px solid rgba(212,160,23,0.4);border-radius:12px;padding:12px 18px;margin-bottom:10px;">
-            <span style="font-size:1.1rem;font-weight:700;color:#d4a017;">⚙️ Panel de Administración</span>
-            <span style="color:#a0a0b0;font-size:0.82rem;margin-left:10px;">Solo visible para el administrador</span>
+        <div style="background:linear-gradient(135deg,rgba(46,125,50,0.15),rgba(180,60,60,0.10));
+                    border:1px solid rgba(46,125,50,0.4);border-radius:12px;padding:12px 18px;margin-bottom:10px;">
+            <span style="font-size:1.1rem;font-weight:700;color:#2e7d32;">⚙️ Panel de Administración</span>
+            <span style="color:#5f7259;font-size:0.82rem;margin-left:10px;">Solo visible para el administrador</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -2688,19 +2688,19 @@ def pagina_historial():
                         datos = html.escape(datos_str[:300])
                         ts = html.escape(str(ar.get("timestamp", "") or ""))
                         usuario = html.escape(str(ar.get("usuario_nombre", "") or "Admin"))
-                        audit_filas += f"""<tr style="border-bottom:1px solid rgba(212,160,23,0.15);">
-                            <td style="padding:8px 12px;color:#e8e8f0;font-size:0.82rem;white-space:nowrap;">{ts}</td>
-                            <td style="padding:8px 12px;color:#d4a017;font-size:0.82rem;font-weight:600;">{accion}</td>
-                            <td style="padding:8px 12px;color:#a0a0b0;font-size:0.78rem;word-break:break-word;max-width:420px;">{datos}</td>
+                        audit_filas += f"""<tr style="border-bottom:1px solid rgba(46,125,50,0.15);">
+                            <td style="padding:8px 12px;color:#243324;font-size:0.82rem;white-space:nowrap;">{ts}</td>
+                            <td style="padding:8px 12px;color:#2e7d32;font-size:0.82rem;font-weight:600;">{accion}</td>
+                            <td style="padding:8px 12px;color:#5f7259;font-size:0.78rem;word-break:break-word;max-width:420px;">{datos}</td>
                             <td style="padding:8px 12px;color:#90cdf4;font-size:0.82rem;font-weight:500;">{usuario}</td>
                         </tr>"""
-                    audit_html = f"""<div style="overflow-x:auto;border-radius:12px;border:1px solid rgba(212,160,23,0.3);margin-top:8px;">
-                    <table style="width:100%;border-collapse:collapse;background:rgba(22,22,28,0.97);font-family:sans-serif;">
+                    audit_html = f"""<div style="overflow-x:auto;border-radius:12px;border:1px solid rgba(46,125,50,0.3);margin-top:8px;">
+                    <table style="width:100%;border-collapse:collapse;background:rgba(255,255,255,0.97);font-family:sans-serif;">
                     <thead><tr style="background:linear-gradient(135deg,#7c3aed,#4c1d95);">
-                        <th style="padding:10px 12px;color:#fff;font-size:0.78rem;text-align:left;">📅 Fecha</th>
-                        <th style="padding:10px 12px;color:#fff;font-size:0.78rem;text-align:left;">⚡ Acción</th>
-                        <th style="padding:10px 12px;color:#fff;font-size:0.78rem;text-align:left;">📋 Detalle</th>
-                        <th style="padding:10px 12px;color:#fff;font-size:0.78rem;text-align:left;">👤 Usuario</th>
+                        <th style="padding:10px 12px;color:#33452f;font-size:0.78rem;text-align:left;">📅 Fecha</th>
+                        <th style="padding:10px 12px;color:#33452f;font-size:0.78rem;text-align:left;">⚡ Acción</th>
+                        <th style="padding:10px 12px;color:#33452f;font-size:0.78rem;text-align:left;">📋 Detalle</th>
+                        <th style="padding:10px 12px;color:#33452f;font-size:0.78rem;text-align:left;">👤 Usuario</th>
                     </tr></thead>
                     <tbody>{audit_filas}</tbody></table></div>"""
                     st.markdown(audit_html, unsafe_allow_html=True)
@@ -2720,19 +2720,19 @@ def pagina_historial():
                             accion = html.escape(str(ar.get("accion", "") or ""))
                             datos = html.escape(str(ar.get("datos", "") or "")[:300])
                             ts = html.escape(str(ar.get("timestamp", "") or ""))
-                            audit_filas += f"""<tr style="border-bottom:1px solid rgba(212,160,23,0.15);">
-                                <td style="padding:8px 12px;color:#e8e8f0;font-size:0.82rem;white-space:nowrap;">{ts}</td>
-                                <td style="padding:8px 12px;color:#d4a017;font-size:0.82rem;font-weight:600;">{accion}</td>
-                                <td style="padding:8px 12px;color:#a0a0b0;font-size:0.78rem;word-break:break-word;max-width:500px;">{datos}</td>
+                            audit_filas += f"""<tr style="border-bottom:1px solid rgba(46,125,50,0.15);">
+                                <td style="padding:8px 12px;color:#243324;font-size:0.82rem;white-space:nowrap;">{ts}</td>
+                                <td style="padding:8px 12px;color:#2e7d32;font-size:0.82rem;font-weight:600;">{accion}</td>
+                                <td style="padding:8px 12px;color:#5f7259;font-size:0.78rem;word-break:break-word;max-width:500px;">{datos}</td>
                                 <td style="padding:8px 12px;color:#90cdf4;font-size:0.82rem;">Admin</td>
                             </tr>"""
-                        audit_html = f"""<div style="overflow-x:auto;border-radius:12px;border:1px solid rgba(212,160,23,0.3);margin-top:8px;">
-                        <table style="width:100%;border-collapse:collapse;background:rgba(22,22,28,0.97);font-family:sans-serif;">
+                        audit_html = f"""<div style="overflow-x:auto;border-radius:12px;border:1px solid rgba(46,125,50,0.3);margin-top:8px;">
+                        <table style="width:100%;border-collapse:collapse;background:rgba(255,255,255,0.97);font-family:sans-serif;">
                         <thead><tr style="background:linear-gradient(135deg,#7c3aed,#4c1d95);">
-                            <th style="padding:10px 12px;color:#fff;font-size:0.78rem;text-align:left;">📅 Fecha</th>
-                            <th style="padding:10px 12px;color:#fff;font-size:0.78rem;text-align:left;">⚡ Acción</th>
-                            <th style="padding:10px 12px;color:#fff;font-size:0.78rem;text-align:left;">📋 Detalle</th>
-                            <th style="padding:10px 12px;color:#fff;font-size:0.78rem;text-align:left;">👤 Usuario</th>
+                            <th style="padding:10px 12px;color:#33452f;font-size:0.78rem;text-align:left;">📅 Fecha</th>
+                            <th style="padding:10px 12px;color:#33452f;font-size:0.78rem;text-align:left;">⚡ Acción</th>
+                            <th style="padding:10px 12px;color:#33452f;font-size:0.78rem;text-align:left;">📋 Detalle</th>
+                            <th style="padding:10px 12px;color:#33452f;font-size:0.78rem;text-align:left;">👤 Usuario</th>
                         </tr></thead>
                         <tbody>{audit_filas}</tbody></table></div>"""
                         st.markdown(audit_html, unsafe_allow_html=True)
@@ -3090,14 +3090,14 @@ def pagina_reportes():
         try:
             fig = px.bar(
                 resumen, x="mes", y="cantidad", color="tipo",
-                color_discrete_map={"ingreso": "#22c55e", "egreso": "#ef4444"},
+                color_discrete_map={"ingreso": "#2e7d32", "egreso": "#c62828"},
                 barmode="group",
                 template="plotly_dark",
                 labels={"mes": "Mes", "cantidad": "Cantidad", "tipo": "Tipo"}
             )
             fig.update_layout(
-                paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(20,20,28,0.85)",
-                font_color="#f0f0f5", height=380, margin=dict(t=20, b=40),
+                paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(255,255,255,0.85)",
+                font_color="#1c2b1c", height=380, margin=dict(t=20, b=40),
                 xaxis_tickangle=-30
             )
             st.plotly_chart(fig, use_container_width=True)
@@ -3377,13 +3377,13 @@ def pagina_consolidado():
         fig_bar = px.bar(
             df_bar, x="producto", y="stock", color="establecimiento",
             barmode="group",
-            color_discrete_sequence=["#d4a017", "#22c55e", "#3b82f6"],
+            color_discrete_sequence=["#2e7d32", "#2e7d32", "#3b82f6"],
             template="plotly_dark",
             labels={"producto": "Producto", "stock": "Stock", "establecimiento": "Establecimiento"}
         )
         fig_bar.update_layout(
-            paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(20,20,28,0.85)",
-            font_color="#f0f0f5", legend_font_color="#f0f0f5",
+            paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(255,255,255,0.85)",
+            font_color="#1c2b1c", legend_font_color="#1c2b1c",
             xaxis_tickangle=-40, height=420, margin=dict(t=30, b=80)
         )
         st.plotly_chart(fig_bar, use_container_width=True)
@@ -3400,8 +3400,8 @@ def pagina_consolidado():
                 template="plotly_dark"
             )
             fig_pie.update_layout(
-                paper_bgcolor="rgba(0,0,0,0)", font_color="#f0f0f5",
-                legend_font_color="#f0f0f5", height=340, margin=dict(t=20, b=20)
+                paper_bgcolor="rgba(0,0,0,0)", font_color="#1c2b1c",
+                legend_font_color="#1c2b1c", height=340, margin=dict(t=20, b=20)
             )
             st.plotly_chart(fig_pie, use_container_width=True)
 
@@ -3414,13 +3414,13 @@ def pagina_consolidado():
                 fig_bajo = px.bar(
                     df_bajo, x="stock", y="producto", orientation="h",
                     color="establecimiento",
-                    color_discrete_sequence=["#ef4444", "#f59e0b", "#f97316"],
+                    color_discrete_sequence=["#c62828", "#b26a00", "#f97316"],
                     template="plotly_dark",
                     labels={"stock": "Stock", "producto": "Producto"}
                 )
                 fig_bajo.update_layout(
-                    paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(20,20,28,0.85)",
-                    font_color="#f0f0f5", height=340, margin=dict(t=10, b=20)
+                    paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(255,255,255,0.85)",
+                    font_color="#1c2b1c", height=340, margin=dict(t=10, b=20)
                 )
                 st.plotly_chart(fig_bajo, use_container_width=True)
 
@@ -3439,13 +3439,13 @@ def pagina_consolidado():
             fig_evo = px.line(
                 df_evo, x="mes", y="cantidad", color="establecimiento_nombre",
                 line_dash="tipo",
-                color_discrete_sequence=["#d4a017", "#22c55e", "#3b82f6"],
+                color_discrete_sequence=["#2e7d32", "#2e7d32", "#3b82f6"],
                 template="plotly_dark",
                 labels={"mes": "Mes", "cantidad": "Cantidad", "establecimiento_nombre": "Establecimiento", "tipo": "Tipo"}
             )
             fig_evo.update_layout(
-                paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(20,20,28,0.85)",
-                font_color="#f0f0f5", legend_font_color="#f0f0f5",
+                paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(255,255,255,0.85)",
+                font_color="#1c2b1c", legend_font_color="#1c2b1c",
                 height=380, margin=dict(t=20, b=40)
             )
             st.plotly_chart(fig_evo, use_container_width=True)
@@ -3458,15 +3458,15 @@ def pagina_consolidado():
             fig_comp = px.bar(
                 df_comp, x="establecimiento", y="stock",
                 color="establecimiento",
-                color_discrete_sequence=["#d4a017", "#22c55e", "#3b82f6"],
+                color_discrete_sequence=["#2e7d32", "#2e7d32", "#3b82f6"],
                 template="plotly_dark",
                 text="stock",
                 labels={"establecimiento": "Establecimiento", "stock": "Stock"}
             )
-            fig_comp.update_traces(textposition="outside", textfont_color="#f0f0f5")
+            fig_comp.update_traces(textposition="outside", textfont_color="#1c2b1c")
             fig_comp.update_layout(
-                paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(20,20,28,0.85)",
-                font_color="#f0f0f5", showlegend=False,
+                paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(255,255,255,0.85)",
+                font_color="#1c2b1c", showlegend=False,
                 height=320, margin=dict(t=20, b=40)
             )
             st.plotly_chart(fig_comp, use_container_width=True)
@@ -3486,10 +3486,10 @@ def pantalla_hub():
         st.markdown(
             "<div style='position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.75);"
             "display:flex;align-items:center;justify-content:center;'>"
-            "<div style='background:#1a1a10;border:2px solid rgba(212,160,23,0.75);"
+            "<div style='background:#1a1a10;border:2px solid rgba(46,125,50,0.75);"
             "border-radius:24px;padding:3rem;text-align:center;max-width:420px;'>"
             "<div style='font-size:3rem;'>&#9881;</div>"
-            "<div style='color:#d4a017;font-weight:800;font-size:1.4rem;'>Sistema en Desarrollo</div>"
+            "<div style='color:#2e7d32;font-weight:800;font-size:1.4rem;'>Sistema en Desarrollo</div>"
             "</div></div>",
             unsafe_allow_html=True
         )
@@ -3513,31 +3513,31 @@ def pantalla_hub():
     # Logo centrado
     st.markdown(
         "<style>"
-        ".hub-logo-wrap{background:#f7f3e8;border:2px solid rgba(212,160,23,0.6);"
+        ".hub-logo-wrap{background:#f7f3e8;border:2px solid rgba(46,125,50,0.6);"
         "border-radius:50%;width:460px;height:276px;display:flex;align-items:center;"
-        "justify-content:center;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.45);"
+        "justify-content:center;overflow:hidden;box-shadow:0 8px 32px rgba(27,58,31,0.12);"
         "margin:2rem auto 2rem auto;}"
         ".hub-logo{width:100%;height:100%;object-fit:contain;padding:15px;}"
-        ".hub-card{background:linear-gradient(160deg,rgba(60,60,70,0.97),rgba(40,40,52,0.99));"
-        "border:1px solid rgba(212,160,23,0.42);border-radius:22px 22px 0 0;"
-        "padding:2.4rem 2rem 2rem;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.4);"
+        ".hub-card{background:linear-gradient(160deg,rgba(240,247,240,0.97),rgba(40,40,52,0.99));"
+        "border:1px solid rgba(46,125,50,0.42);border-radius:22px 22px 0 0;"
+        "padding:2.4rem 2rem 2rem;text-align:center;box-shadow:0 8px 24px rgba(27,58,31,0.12);"
         "display:flex;flex-direction:column;align-items:center;justify-content:center;"
         "min-height:260px;box-sizing:border-box;}"
         ".hub-card-dev{background:linear-gradient(160deg,rgba(32,32,40,0.97),rgba(22,22,30,0.99));"
-        "border-color:rgba(212,160,23,0.22);opacity:0.85;}"
+        "border-color:rgba(46,125,50,0.22);opacity:0.85;}"
         ".hub-card-icon{font-size:3.5rem;margin-bottom:0.85rem;line-height:1;}"
         ".hub-card-title{font-family:'Playfair Display',serif;font-size:1.45rem;"
-        "font-weight:700;color:#f0f0f5;margin:0 0 0.5rem;}"
+        "font-weight:700;color:#1c2b1c;margin:0 0 0.5rem;}"
         ".hub-card-desc{font-size:0.9rem;color:#9090a8;line-height:1.55;}"
-        ".dev-badge{display:inline-flex;background:rgba(212,160,23,0.13);"
-        "border:1px solid rgba(212,160,23,0.42);border-radius:20px;padding:4px 16px;"
-        "font-size:0.82rem;color:#d4a017;font-weight:700;margin-top:1rem;}"
+        ".dev-badge{display:inline-flex;background:rgba(46,125,50,0.13);"
+        "border:1px solid rgba(46,125,50,0.42);border-radius:20px;padding:4px 16px;"
+        "font-size:0.82rem;color:#2e7d32;font-weight:700;margin-top:1rem;}"
         "/* Limitar ancho de columnas del hub */"
         "div[data-testid='stHorizontalBlock']{max-width:960px;margin-left:auto !important;margin-right:auto !important;}"
         "div[data-testid='stHorizontalBlock'] > div[data-testid='column']{max-width:300px !important;min-width:200px !important;}"
         "</style>"
         "<div class='hub-logo-wrap'>"
-        "<img src='https://raw.githubusercontent.com/marcasosguemes-cell/Stock-Agro-Demo/main/Logo.png'"
+        "<img src='https://raw.githubusercontent.com/mantoniogonzalez549-star/agrisolution-remitos-demo/main/icon-512.png'"
         " class='hub-logo' alt='Logo'>"
         "</div>",
         unsafe_allow_html=True
@@ -3700,11 +3700,11 @@ def pagina_ordenes():
 
 def _badge_estado(estado):
     colores = {
-        "pendiente": ("#f59e0b", "⏳ Pendiente"),
-        "aprobada":  ("#22c55e", "✅ Aprobada"),
-        "rechazada": ("#ef4444", "❌ Rechazada"),
+        "pendiente": ("#b26a00", "⏳ Pendiente"),
+        "aprobada":  ("#2e7d32", "✅ Aprobada"),
+        "rechazada": ("#c62828", "❌ Rechazada"),
     }
-    color, txt = colores.get(estado, ("#a0a0b0", estado))
+    color, txt = colores.get(estado, ("#5f7259", estado))
     return (f'<span style="background:{color}22;color:{color};border:1px solid {color}66;'
             f'border-radius:12px;padding:3px 12px;font-size:.8rem;font-weight:700;">{txt}</span>')
 
