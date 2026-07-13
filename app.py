@@ -281,9 +281,9 @@ st.markdown("""
     }
 
     .sidebar-logo-oval {
-        background: #f7f3e8;
-        border: 2px solid var(--gold-60);
-        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid rgba(46,125,50,0.35);
+        border-radius: 24px;
         width: 185px;
         height: 185px;
         display: flex;
@@ -3513,22 +3513,22 @@ def pantalla_hub():
     # Logo centrado
     st.markdown(
         "<style>"
-        ".hub-logo-wrap{background:#f7f3e8;border:2px solid rgba(46,125,50,0.6);"
-        "border-radius:50%;width:460px;height:276px;display:flex;align-items:center;"
+        ".hub-logo-wrap{background:#ffffff;border:1px solid rgba(46,125,50,0.35);"
+        "border-radius:24px;width:300px;height:300px;display:flex;align-items:center;"
         "justify-content:center;overflow:hidden;box-shadow:0 8px 32px rgba(27,58,31,0.12);"
         "margin:2rem auto 2rem auto;}"
         ".hub-logo{width:100%;height:100%;object-fit:contain;padding:15px;}"
-        ".hub-card{background:linear-gradient(160deg,rgba(240,247,240,0.97),rgba(40,40,52,0.99));"
+        ".hub-card{background:linear-gradient(160deg,#ffffff,rgba(236,245,236,0.98));"
         "border:1px solid rgba(46,125,50,0.42);border-radius:22px 22px 0 0;"
         "padding:2.4rem 2rem 2rem;text-align:center;box-shadow:0 8px 24px rgba(27,58,31,0.12);"
         "display:flex;flex-direction:column;align-items:center;justify-content:center;"
         "min-height:260px;box-sizing:border-box;}"
-        ".hub-card-dev{background:linear-gradient(160deg,rgba(32,32,40,0.97),rgba(22,22,30,0.99));"
+        ".hub-card-dev{background:linear-gradient(160deg,#f6f9f6,#eef4ee);"
         "border-color:rgba(46,125,50,0.22);opacity:0.85;}"
         ".hub-card-icon{font-size:3.5rem;margin-bottom:0.85rem;line-height:1;}"
         ".hub-card-title{font-family:'Playfair Display',serif;font-size:1.45rem;"
         "font-weight:700;color:#1c2b1c;margin:0 0 0.5rem;}"
-        ".hub-card-desc{font-size:0.9rem;color:#9090a8;line-height:1.55;}"
+        ".hub-card-desc{font-size:0.9rem;color:#5f7259;line-height:1.55;}"
         ".dev-badge{display:inline-flex;background:rgba(46,125,50,0.13);"
         "border:1px solid rgba(46,125,50,0.42);border-radius:20px;padding:4px 16px;"
         "font-size:0.82rem;color:#2e7d32;font-weight:700;margin-top:1rem;}"
