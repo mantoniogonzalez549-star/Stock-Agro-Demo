@@ -104,7 +104,7 @@ st.markdown("""
         --text-primary: #1c2b1c;
         --text-secondary: #33452f;
         --text-muted: #5f7259;
-        --text-gold: #d4c8a8;
+        --text-gold: #4a5d4a;
         --green: #2e7d32;
         --red: #c62828;
         --amber: #b26a00;
@@ -267,7 +267,7 @@ st.markdown("""
         background: var(--gold-18) !important;
         border-color: var(--gold-60) !important;
         transform: translateX(4px) !important;
-        color: #f0e8c8 !important;
+        color: #33452f !important;
     }
 
     .sidebar-header {
@@ -298,7 +298,7 @@ st.markdown("""
         width: 100% !important;
         height: auto !important;
         display: block;
-        transform: scale(1.9);
+        transform: none;
         transform-origin: center center;
     }
 
@@ -365,9 +365,9 @@ st.markdown("""
     }
 
     .title-bubble-login {
-        background: rgba(0,0,0,0.65);
+        background: rgba(255,255,255,0.85);
         backdrop-filter: blur(16px);
-        border: 1px solid rgba(255,215,120,0.6);
+        border: 1px solid rgba(46,125,50,0.35);
         border-radius: 20px;
         padding: 1rem 2.2rem 0.9rem 2.2rem;
         box-shadow: 0 8px 32px rgba(27,58,31,0.10);
@@ -389,13 +389,13 @@ st.markdown("""
     .login-subtitle {
         font-family: 'DM Sans', sans-serif !important;
         font-size: 0.9rem !important;
-        color: #FFE8B6 !important;
+        color: #e8f5e9 !important;
         font-weight: 500 !important;
         letter-spacing: 0.07em !important;
     }
 
     .title-bubble {
-        background: linear-gradient(135deg,rgba(200,160,96,0.95) 0%,rgba(184,144,90,0.95) 100%);
+        background: linear-gradient(135deg,rgba(46,125,50,0.95) 0%,rgba(27,94,32,0.95) 100%);
         border-radius: 20px;
         padding: 1rem 2.2rem;
         display: inline-block;
@@ -408,7 +408,7 @@ st.markdown("""
         margin: 0;
         font-family: 'Playfair Display', serif !important;
         font-size: 1.8rem !important;
-        color: #1c2b1c !important;
+        color: #ffffff !important;
         font-weight: 700;
         letter-spacing: 0.02em;
         text-shadow: 0 2px 6px rgba(27,58,31,0.14) !important;
@@ -416,7 +416,7 @@ st.markdown("""
 
     .title-bubble p {
         margin: 0.35rem 0 0 0;
-        color: #FFE8B6 !important;
+        color: #e8f5e9 !important;
         font-size: 0.9rem;
         font-weight: 500;
     }
@@ -598,11 +598,11 @@ st.markdown("""
 
     .topbar-logo-oval {
         background: #ffffff;
-        border: 2px solid var(--gold-60);
-        border-radius: 50%;
-        width: 62px;
-        height: 62px;
-        min-width: 62px;
+        border: 1px solid rgba(46,125,50,0.35);
+        border-radius: 14px;
+        width: 66px;
+        height: 66px;
+        min-width: 66px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -612,10 +612,10 @@ st.markdown("""
 
     .topbar-logo {
         width: 100% !important;
-        height: auto !important;
+        height: 100% !important;
+        object-fit: contain !important;
         display: block;
-        transform: scale(1.9);
-        transform-origin: center center;
+        padding: 4px;
     }
 
     .topbar-brand h1 {
@@ -677,7 +677,7 @@ st.markdown("""
     div[class*="st-key-nav_"] button:hover {
         background: var(--gold-18) !important;
         border-color: var(--gold-60) !important;
-        color: #f0e8c8 !important;
+        color: #33452f !important;
         transform: translateY(-2px) !important;
     }
 
@@ -1724,7 +1724,7 @@ def pagina_dashboard():
             ),
             text=df_chart["stock"].apply(lambda v: f"{v:,.1f}"),
             textposition="outside",
-            textfont=dict(color="#d4c8a8", size=11),
+            textfont=dict(color="#4a5d4a", size=11),
             hovertemplate="<b>%{y}</b><br>Stock: %{x:,.2f}<extra></extra>"
         ))
         fig.update_layout(
@@ -1771,7 +1771,7 @@ def pagina_dashboard():
         <tr onmouseover="this.style.backgroundColor='rgba(46,125,50,0.12)'"
             onmouseout="this.style.backgroundColor='transparent'">
             <td style="padding:9px 13px;color:#1c2b1c;font-size:0.88rem;font-weight:600;">{html.escape(str(row['producto']))}</td>
-            <td style="padding:9px 13px;color:#d4c8a8;font-size:0.84rem;">{html.escape(str(row['categoria']))}</td>
+            <td style="padding:9px 13px;color:#4a5d4a;font-size:0.84rem;">{html.escape(str(row['categoria']))}</td>
             <td style="padding:9px 13px;color:#b0b0c0;font-size:0.84rem;">{html.escape(str(row['presentacion']))}</td>
             <td style="padding:9px 13px;color:{stock_color};font-size:0.95rem;font-weight:800;text-align:right;">{stock_val:,.2f}</td>
             <td style="padding:9px 13px;color:#5f7259;font-size:0.82rem;">{html.escape(str(row['unidad']))}</td>
@@ -2602,7 +2602,7 @@ def pagina_historial():
             onmouseout="this.style.backgroundColor='{row_bg}'">
             <td style="padding:9px 13px;color:#243324;font-size:0.84rem;white-space:nowrap;">{fecha_cell}</td>
             <td style="padding:9px 13px;text-align:center;">{tipo_badge}</td>
-            <td style="padding:9px 13px;color:#d4c8a8;font-size:0.84rem;">{html.escape(str(row['Establecimiento']))}</td>
+            <td style="padding:9px 13px;color:#4a5d4a;font-size:0.84rem;">{html.escape(str(row['Establecimiento']))}</td>
             <td style="padding:9px 13px;color:#1c2b1c;font-size:0.84rem;font-weight:600;">{html.escape(str(row['Producto']))}</td>
             <td style="padding:9px 13px;color:#2e7d32;font-size:0.9rem;font-weight:700;text-align:right;">{cantidad_fmt}</td>
             <td style="padding:9px 13px;color:#90cdf4;font-size:0.82rem;">{usuario_cell}</td>
