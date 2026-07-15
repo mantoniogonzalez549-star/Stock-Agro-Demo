@@ -136,7 +136,7 @@ st.markdown("""
         content: '' !important;
         position: fixed !important;
         inset: 0 !important;
-        background-image: url('https://raw.githubusercontent.com/mantoniogonzalez549-star/agrisolution-remitos-demo/main/fondo.jpg') !important;
+        background-image: url('https://raw.githubusercontent.com/agrisolutiondemo/agrisolution-remitos-demo/main/fondo.jpg') !important;
         background-size: cover !important;
         background-position: center bottom !important;
         background-repeat: no-repeat !important;
@@ -948,7 +948,7 @@ def login():
         st.markdown("""
         <div class="title-container">
             <div class="logo-oval-wrap">
-                <img src="https://raw.githubusercontent.com/mantoniogonzalez549-star/agrisolution-remitos-demo/main/icon-512.png" class="title-logo" alt="Logo">
+                <img src="https://raw.githubusercontent.com/agrisolutiondemo/agrisolution-remitos-demo/main/icon-512.png" class="title-logo" alt="Logo">
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -1111,7 +1111,7 @@ def topbar():
         st.markdown("""
         <div class="topbar-brand">
             <div class="topbar-logo-oval">
-                <img src="https://raw.githubusercontent.com/mantoniogonzalez549-star/agrisolution-remitos-demo/main/icon-512.png" class="topbar-logo" alt="Logo">
+                <img src="https://raw.githubusercontent.com/agrisolutiondemo/agrisolution-remitos-demo/main/icon-512.png" class="topbar-logo" alt="Logo">
             </div>
             <h1>Stock Agrícola</h1>
         </div>
@@ -3537,7 +3537,7 @@ def pantalla_hub():
         "div[data-testid='stHorizontalBlock'] > div[data-testid='column']{max-width:300px !important;min-width:200px !important;}"
         "</style>"
         "<div class='hub-logo-wrap'>"
-        "<img src='https://raw.githubusercontent.com/mantoniogonzalez549-star/agrisolution-remitos-demo/main/icon-512.png'"
+        "<img src='https://raw.githubusercontent.com/agrisolutiondemo/agrisolution-remitos-demo/main/icon-512.png'"
         " class='hub-logo' alt='Logo'>"
         "</div>",
         unsafe_allow_html=True
